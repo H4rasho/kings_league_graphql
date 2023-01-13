@@ -9,4 +9,4 @@ export async function scrapingTeams (): Void {
  }
 }
 
-await scrapingTeams(); 
+scrapingTeams(); 
