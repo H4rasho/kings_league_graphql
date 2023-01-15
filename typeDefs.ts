@@ -1,6 +1,13 @@
 import { gql } from "https://deno.land/x/graphql_tag@0.0.1/mod.ts";
 
 export const typeDefs = gql`
+  type Presidents {
+    id: ID
+    name: String
+    image: String
+    teamId: String
+  }
+
   type CoachInfo {
     name: String
     image: String
@@ -34,5 +41,6 @@ export const typeDefs = gql`
     hello: String
     lol: String
     teams: [Teams]
+    presidents: [Presidents]
   }
 `;
