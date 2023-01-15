@@ -1,11 +1,12 @@
-import { getPresidents } from "./src/presidents/service.ts";
-import { getTeams } from "./src/teams/service.ts";
+import { API_KEYS } from "./setup.ts";
+import { getFromDb } from "./src/index.ts";
 
 export const resolvers = {
   Query: {
     hello: () => `Hello, World!`,
     lol: () => "Lol",
-    teams: () => getTeams(),
-    presidents: () => getPresidents(),
+    teams: () => getFromDb(API_KEYS.teams),
+    presidents: () => getFromDb(API_KEYS.presidents),
+    leaderboard: () => getFromDb(API_KEYS.leaderboard),
   },
 };

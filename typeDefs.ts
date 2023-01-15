@@ -37,10 +37,22 @@ export const typeDefs = gql`
     socialNetworks: [String]
   }
 
+  type Leaderboard {
+    wins: Int
+    losses: Int
+    scoredGoals: Int
+    concededGoals: Int
+    yellowCards: Int
+    redCards: Int
+    rank: Int
+    team: Teams
+  }
+
   type Query {
     hello: String
     lol: String
     teams: [Teams]
     presidents: [Presidents]
+    leaderboard: [Leaderboard]
   }
 `;
