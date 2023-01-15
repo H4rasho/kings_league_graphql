@@ -1,5 +1,6 @@
 
-export async function getTeams () {
+export async function getTeams ()  {
+
  try {
   const teams = await Deno.readTextFile("./db/teams.json")
   if(!teams) return [];
