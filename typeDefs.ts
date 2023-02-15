@@ -8,6 +8,12 @@ export const typeDefs = gql`
     teamId: String
   }
 
+  type Coaches {
+    name: String
+    teamName: String
+    image: String
+  }
+
   type CoachInfo {
     name: String
     image: String
@@ -54,5 +60,6 @@ export const typeDefs = gql`
     teams: [Teams]
     presidents: [Presidents]
     leaderboard: [Leaderboard]
+    coaches: [Coaches]
   }
 `;

@@ -8,5 +8,6 @@ export const resolvers = {
     teams: () => getFromDb(API_KEYS.teams),
     presidents: () => getFromDb(API_KEYS.presidents),
     leaderboard: () => getFromDb(API_KEYS.leaderboard),
+    coaches: () => getFromDb(API_KEYS.coaches),
   },
 };
